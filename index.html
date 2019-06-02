@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<title> IEADEAP </title>
+	
+	<style type="text/css" >
+	#featured .ui-tabs-panel .info{
+		display:none;
+	}
+	</style>
+	<script type="text/javascript" src="js/jquery-1.3.2.min.js" ></script>
+	<script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js" ></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$("#featured").tabs({fx:[{opacity: "toggle", duration: 'slow'}, {opacity: "toggle", duration: 'normal'}],
+			show: function(event, ui){
+				$('#featured .ui-tabs-panel .info').hide();
+				var infoheight=$('.info', ui.panel).height();
+				$('.info', ui.panel).css('height', '0px').animate({ 'height': infoheight }, 500);
+			}
+		}).tabs("rotate", 5000, true);
+		$('#featured').hover(
+			function(){ $('#featured').tabs('rotate', 0, true); },
+			function(){ $('#featured').tabs('rotate', 5000, true); }
+		);
+		$('#featured .ui-tabs-panel a.hideshow').click(function(){
+			if($(this).text()=='Hide'){
+				$(this).parent('.info').animate({ 'height': '0px' }, 500);
+				$(this).text('Show');
+			}
+			else{
+				$(this).parent('.info').animate({ 'height': '70px' }, 500);
+				$(this).text('Hide');
+			}
+			return false;
+		});
+	});
+</script>
+</head>
+<body>
+
+<div id="container">
+<div id="cabecalho">
+<header>
+	<hgroup id="inicio">
+	
+	 <!-- Imagem de cabeçaho -->
+	<img id="cabecalho" src="imagens/_logo.png">
+	
+	<!-- Redes Sociais -->
+	<div id="ic_sociais">
+		<a href="https://www.facebook.com/?q=#/josias.carreiro.7" title="Face Pr. Presidente Josias Carreiro" target="_blank"/> 
+		<img src="imagens/icones/facebook.png"> 
+		</a>
+		<br/>
+		<a href="http://apoioteologico.blogspot.com.br/2015/09/blog-post_15.html" title="Visite o blog Pr. Eli Martins - Apoio Teologico" target="_blank"/><img src="imagens/icones/blogger.png">
+		</a>
+	</div>
+	
+	<nav id="menu">
+	
+	<ul>
+		<li> <a href="index.html"> Principal </a> </li>
+		<li> <a href="filiais.html"> Filiais </a></li>
+		<li> <a href="agenda.html"> Agenda </a></li>
+		<li> <a href=""> Fotos </a></li>
+		<li> <a href="estudos.html"> Estudos </a></li>
+		<li> <a href=""> Missões </a></li>
+		<li> <a href=""> Contato </a></li>
+	</nav>
+	</hgroup>
+</header>
+</div>	
+
+ <div id="interface">
+	
+	<img id="missao" src="imagens/_pergaminho.png">
+	<!--
+	<header id="missão">
+		<h2 class="missao"> Nossa Missão</h2>
+		<h3 class="inicio">Levar as boas novas do Senhor, ensinando e pregando a palavra que traz transformação e a salvação de vidas atraves de Nosso Senhor e Salvador Jesus Cristo</h3>
+	</header>
+	-->
+	
+	<h3 id="titulosiniciais"> Destaques <h3>
+	
+		<!-- Slide -->
+		
+		<div id="featured" >
+		  <ul class="ui-tabs-nav">
+	        <li class="ui-tabs-nav-item ui-tabs-selected" id="nav-fragment-1">
+				<a href="#fragment-1"><img src="imagens/slide1_small.jpg" alt="" />
+					<span>Jubileu de prata </span>
+				</a>
+			</li>
+	        <li class="ui-tabs-nav-item" id="nav-fragment-2"><a href="#fragment-2">
+				<img src="imagens/slide2_small.jpg" alt="" />
+					<span> Sede IEADEAP</span>
+					</a>
+			</li>
+	        <li class="ui-tabs-nav-item" id="nav-fragment-3">
+				<a href="#fragment-3"><img src="imagens/slide3_small.jpg" alt="" />
+					<span>Congregações</span>	
+				</a>
+			</li>
+			<li class="ui-tabs-nav-item" id="nav-fragment-4">
+				<a href="#fragment-4"><img src="imagens/slidepr_small.jpg" alt="" />
+					<span>Pr. Presidente</span>	
+				</a>
+			</li>
+	      </ul>
+
+	    <!-- First Content -->
+	    <div id="fragment-1" class="ui-tabs-panel" style="">
+			<img src="imagens/slide1.jpg" alt=""  style="width:500px; height:300px; "/>
+			 <div class="info" >
+				<h2><a href="#" >Jubileu de Prata</a></h2>
+				<p> Foi forte a presença de Deus</p>
+			 </div>
+	    </div>
+
+
+	    <!-- Second Content -->
+	    <div id="fragment-2" class="ui-tabs-panel ui-tabs-hide" style="">
+			<img src="imagens/slide2.jpg" alt="" style="width:500px; height:300px; "/>
+			 <div class="info" >
+				<h2><a href="#" > Igreja Sede</a></h2>
+				<p> Venha adorar a Deus conosco!</p>
+	         </div>
+	    </div>
+		
+		 <!-- Third Content -->
+	    <div id="fragment-3" class="ui-tabs-panel ui-tabs-hide" style="">
+			<img src="imagens/slide3.jpg" alt="" style="width:500px; height:300px; "/>
+			 <div class="info" >
+				<h2><a href="#" > Congregações </a></h2>
+				<p>Congregações espalhadas pelo Brasil - Deus tem abençoado essa obra</a></p>
+			 </div>
+	    </div>
+		
+		<div id="fragment-4" class="ui-tabs-panel ui-tabs-hide" style="">
+			<img src="imagens/slidepr.jpg" alt="" style="width:500px; height:300px; "/>
+			 <div class="info" >
+				<h2><a href="#" > Pr. Presidente </a></h2>
+				<p> Pr. Josias Carreiro - Uma vida pela obra. </a></p>
+			 </div>
+	    </div>
+	    </div>
+		
+		<br/>
+	<hr>
+	<section id="esquerda">
+		<h3 id="titulos_esquerda"> Eventos </h3>
+		<img src="imagens/evento_1.jpg" alt=" Campanha pela Família">
+	</section>
+	
+	<aside id="lateral">
+		<h3 id="titulos_direita"> testemunhos </h3>
+		<p  style=" font-size:small"> Esta igreja foi um grande instrumento de Deus para mudar meus pensamentos e minha vida pessoal e espiritual, Deus continue abençoando esta grande obra Missionária.</p>
+		<p style=" font-size:small"> Deyvison José de Paula -  Patrocínio do Muriaé-MG </p>
+	</aside>
+	
+	<footer id="rodape">
+	
+	
+	</footer>
+	
+  </div>
+	
+	
+	
+	<!--
+	<figure class="foto-legenda">
+		<img src="imagens/sede.jpg">
+	<figcaption>
+		<h2>SEDE</h2>	
+	</figcaption>
+</figure>
+</div>
+	-->
+
+	
+
+<p class="final"> 
+Licenciado para Igreja Evangélica Assembléia de Deus em Agostinho Porto<br/>
+Copyright &copy; 2013 - by Deyvison Technology&reg; <p/>
+</div>
+</body>
+</html>

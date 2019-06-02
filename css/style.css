@@ -1,0 +1,375 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+body {
+	color: rgba(0,10,0,1);
+	margin: 0;
+	padding: 0;
+	background: url("../imagens/_backbody.jpg") no-repeat fixed;
+	background-size: 100%;
+}
+
+p {
+	text-align: justify;
+	text-indent: 50px;	
+    margin-bottom: 5px;
+
+}
+
+h1{
+    margin-top: 2px;
+    margin-bottom: 1px;
+	
+}
+
+
+div#container{
+	width:100%;
+}
+
+
+/*Formatação do CABECALHO*/
+
+div#cabecalho {
+	width:100%;
+	margin: auto auto auto auto;
+	/*background-color: rgba(255, 255, 255, 0.32);*/
+	background-image: url("../imagens/_ceu-cabecalho.jpg")
+}
+
+div#ic_sociais{
+	margin-top: -200px;
+    left: 0px;
+    display: block;
+    position: absolute;
+}
+
+img#cabecalho{
+	width:700px; 
+	height: 220px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+/*Formatação do MENU*/
+
+nav#menu {
+	background: rgba(0,0,0,.2);
+	width:100%;
+	height: 35px;
+	margin-top: 10px;
+}
+
+nav#menu ul{
+	margin:auto;
+	padding-top:3px;
+	height: 35px;
+	position:relative;
+	width:1120px;
+	font-weight: bold;
+	/*remover os bullets da lista*/
+	list-style:none;
+	float:center;
+}
+
+nav#menu li{
+	font-family: Trajan Pro, sans-serif;
+	text-transform: uppercase;
+	width: 150px;
+	text-align:center;
+	float:left; 
+	transition: background-color 1s;
+}
+
+nav#menu li a{
+	color:#333; 
+	text-decoration:none;
+	padding:5px 10px; /* altura e largura */
+	display:block;
+}
+
+nav#menu li a:hover{
+	background:rgba(1, 168, 89, 0.37);/* fundo ao passar*/
+	color:#fff;
+	-moz-box-shadow:0 3px 10px 0 #CCC;
+	-webkit-box-shadow:0 3px 10px 0 #ccc; /* sombra fora da caixa*/
+	text-shadow:0px 0px 5px #fff;
+}
+
+nav#menu h1{
+	display: none;
+}
+
+div#interface{
+    margin-bottom: auto;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+	width: 1120px; 
+	background-color: rgba(255, 255, 255, 0.48);
+	box-shadow: 0px 0px 10px rgba(0,0,0,.7);
+	padding-left: 15px;
+	padding-right: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+h3.inicio{
+	font-family: MV Boli, sans-serif;
+	text-align:center;
+	  color: rgb(94, 46, 46);
+}
+
+h3#titulosiniciais{
+	font-family: Trajan Pro, sans-serif;
+	font-size: x-large;
+	text-align: center;
+	color: rgb(190, 76, 76);
+	/* -webkit-border-radius: 10px; */
+	/*-moz-border-radius: 10px;*/
+	/* border-radius: 10px; */
+	width: 100%;
+	height: 22px;
+	font-stretch: initial;
+	/* background-image: url("../imagens/_backTitle.png"); */
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-shadow: 0px 2px 2px rgb(205, 164, 81);
+
+}
+
+header#missao{
+	background-image: url("../imagens/_pergaminho.png");
+}
+
+img#missao {
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	
+}
+
+h2.missao{
+  font-family: MV boli;
+  color: rgb(224, 23, 54);
+  height: 4px;
+  font-stretch: initial;
+  margin-left: auto;
+  padding-left: 450px;
+  margin-top: 0px;
+  padding-bottom: 15px;
+  text-shadow: 1px -2px 5px rgb(42, 119, 73);
+  font-size: 30px;
+}
+
+/* Formatacao slide*/
+
+#featured{ 
+	background-image: url("../imagens/fundo.jpg");
+	width:500px; 
+	padding-right:300px; 
+	position:relative; 
+	border:3px solid rgba(0,0,0, 0.5); 
+	margin-left: 180px;
+	height:300px; overflow:hidden;
+}
+#featured ul.ui-tabs-nav{ 
+	position:absolute; 
+	top:0; left:500px; 
+	list-style:none; 
+	padding:0; margin:0; 
+	width:300px; height:300px;
+	overflow:auto;
+	overflow-x:hidden;
+}
+#featured ul.ui-tabs-nav li{ 
+	padding:1px 0; padding-left:13px;  
+	font-size:12px; 
+	color:#666; 
+}
+#featured ul.ui-tabs-nav li img{ 
+	width: 80px;
+	height: 50px;
+	float:left; margin:2px 5px; 
+	background:#fff; 
+	padding:2px; 
+	border:1px solid #eee;
+}
+#featured ul.ui-tabs-nav li span{ 
+	font-size:11px; font-family:Verdana; 
+	line-height:18px; 
+}
+#featured li.ui-tabs-nav-item a{ 
+	margin-bottom: 5px;
+    margin-top: 3px;
+	display:block; 
+	height:60px; text-decoration:none;
+	color:#333;  background:rgba(0, 0, 0, 0.37); 
+	line-height:20px; outline:none;
+}
+#featured li.ui-tabs-nav-item a:hover{ 
+	background:#f2f2f2; 
+}
+#featured li.ui-tabs-selected, #featured li.ui-tabs-active{ 
+	background:url("../imagens/selected-item.gif") top left no-repeat;  
+}
+#featured ul.ui-tabs-nav li.ui-tabs-selected a, #featured ul.ui-tabs-nav li.ui-tabs-active a{ 
+	background:#ccc; 
+}
+#featured .ui-tabs-panel{ 
+	width:500px; height:300px; 
+	background:#999; position:relative;
+}
+#featured .ui-tabs-panel .info{ 
+	position:absolute;
+	width:100%;
+	bottom:0; left:0; 
+	height:70px; 
+	background-color: rgba(0,0,0,0.8); 
+}
+#featured .ui-tabs-panel .info a.hideshow{
+	position:absolute; font-size:11px; font-family:Verdana; color:#f0f0f0; right:10px; top:-20px; line-height:20px; margin:0; outline:none; background:#333;
+}
+#featured .info h2{ 
+	font-size:1.2em; font-family:Georgia, serif; 
+	color:#fff; padding:5px; margin:0; font-weight:normal;
+	overflow:hidden; 
+}
+#featured .info p{ 
+	margin:0 5px; 
+	font-family:Verdana; font-size:11px; 
+	line-height:15px; color:#f0f0f0;
+}
+#featured .info a{ 
+	text-decoration:none; 
+	color:#fff; 
+}
+#featured .info a:hover{ 
+	text-decoration:underline; 
+}
+#featured .ui-tabs-hide{ 
+	display:none; 
+}
+
+hr#separacao {
+	height: 10px;
+	border: 0;
+	box-shadow: 0 10px 10px -10px #8c8b8b inset;
+}
+
+section#esquerda{
+	display: block;
+	width: 700px;
+	float: left;
+	border-right: 1px solid #606060;
+	padding-right: 15px;
+}
+
+section#esquerda img{
+	margin: auto;
+	display: block;
+}
+
+section#esquerda p {
+	color: rgb(71, 12, 12);
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+ h3#titulos_esquerda{
+	font-family: Trajan Pro, sans-serif;
+	color: rgb(255,255,255);
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+		width:650px; height:22px;
+		float: left;
+	font-stretch: initial;
+	background-color: rgb(160, 32, 32);
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 6px;
+	text-shadow: 2px 2px 2px rgb(0,0,0);
+}
+	
+aside#lateral{
+	display: block;
+	width: 350px;
+	float: right;
+}
+
+h3#titulos_direita{
+	font-family: Trajan Pro, sans-serif;
+	color: rgb(255,255,255);
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+		width:300px; height:22px;
+		float: left;
+	font-stretch: initial;
+	background-color: rgb(160, 32, 32);
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 6px;
+	text-shadow: 2px 2px 2px rgb(0,0,0);
+	}
+
+footer#rodape{
+	clear: both; /* tira rodape da divisao*/
+	border-top: 1px solid #606060;
+	}
+
+
+
+/*Formatação das imagens com legenda*/
+figure.foto-legenda {
+	position: relative;
+	border: 8px solid white;
+	box-shadow: 1px 1px 5px black;
+}
+figure.foto-legenda img{
+	width:100%;
+	height:100%
+}
+
+figure.foto-legenda figcaption{
+	opacity: 0;
+	position: absolute;
+	top: 0px;
+	background-color: rgba(0,0,0,.4);
+	color: white;
+	width:100%;
+	height:100%;
+	padding: 20px; /*espaçamento interno*/
+	box-sizing: border-box; /*espaço de legenda ocupando espaço da imagem*/
+	transition: opacity 1s;
+}
+figure.foto-legenda:hover figcaption{
+	opacity: 1; /*ao passar o mouse sobra a imagem aparecerá as legendas*/
+}
+
+p.final {
+	float:center;
+	text-align: center;
+}
+
+/* Pagina Estudos */
+fieldset {
+    border-color: #6240C0;
+    margin: 20px;
+	font-size: 20px;
+}
+
+legend.tit{
+	font-size: 25px;
+	color: rgba(33, 33, 114, 0.73);
+	font-family: Trajan Pro,sans-serif;
+}
+
+fieldset#estudos {
+    /*background: transparent url("../imagens/estudos.png") no-repeat scroll 95% 95%;
+}
+
